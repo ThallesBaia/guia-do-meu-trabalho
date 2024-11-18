@@ -1,0 +1,92 @@
+[07:46, 11/18/2024] Thalles Baia: # Criando o projeto do portfólio pessoal em HTML, CSS e JS
+# Gerar os arquivos necessários para o projeto e organizar em uma estrutura básica
+
+# Estrutura de diretórios e arquivos
+project_path = "/mnt/data/Thalles_Baia_Portfolio"
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalles Baia - Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thalles Baia</h1>
+        <p>Bem-vindo ao meu portfólio!</p>
+    </header>
+    <main>
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Meu nome é Thalles Baia. Este site foi desenvolvido por mim para demonstrar meu aprendizado em programação.</p>
+        </section>
+        <section id="projects">
+            <h2>Meus Projetos</h2>
+            <ul>
+                <li>Projeto 1 - Em desenvolvimento</li>
+                <li>Projeto 2 - Em breve!</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Thalles Baia &copy; 2024</p>
+    </footer>
+</body>
+</html>
+"""
+
+css_content = """
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+header {
+    background-color: #0078d7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+h1, h2 {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+"""
+
+# Salvando arquivos no diretório
+import os
+
+# Criar diretórios
+os.makedirs(project_path, exist_ok=True)
+
+# Criar arquivos
+with open(os.path.join(project_path, "index.html"), "w") as file:
+    file.write(html_content)
+
+with open(os.path.join(project_path, "styles.css"), "w") as file:
+    file.write(css_content)
+
+project_path
+
